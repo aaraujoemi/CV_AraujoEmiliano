@@ -1484,3 +1484,432 @@ section .container {
   
   
 }
+
+/* =========================================================
+   AJUSTES FINALES RESPONSIVE - CV EMILIANO ARAUJO
+   Estas reglas se dejan al final para pisar estilos anteriores
+   duplicados o conflictivos del template.
+   ========================================================= */
+
+/* Foto de perfil */
+.foto-cv {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 8px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Portfolio: normaliza imágenes para que se vean parejas */
+.portfolio .portfolio-wrap img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Contacto con íconos: versión desktop */
+.contact .contact-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  margin-top: 45px;
+  width: 100%;
+}
+
+.contact .icon-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.contact .contact-icons a,
+.contact-icons a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.22);
+  font-size: 115px;
+  line-height: 1;
+  transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.contact .contact-icons a:hover,
+.contact-icons a:hover {
+  color: #e20620;
+  transform: translateY(-6px);
+  text-shadow: 0 0 18px rgba(226, 6, 32, 0.45);
+}
+
+/* Evita que reglas viejas de .info-box afecten si no se usan */
+.contact .info-box {
+  height: auto;
+}
+
+/* =========================================================
+   MOBILE GENERAL
+   ========================================================= */
+@media (max-width: 991px) {
+
+  body {
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    background-position: center top;
+    background-size: auto 100vh;
+    background-repeat: no-repeat;
+    background-color: #040404;
+    background-attachment: scroll;
+  }
+
+  #header {
+    min-height: 100vh;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 0 20px;
+  }
+
+  #header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  #header h1 {
+    font-size: 40px;
+    line-height: 1.1;
+    text-align: center;
+    margin: 0 0 16px 0;
+    max-width: 100%;
+  }
+
+  #header h1 a,
+  #header h1 a:hover {
+    font-size: 40px;
+    line-height: 1.1;
+  }
+
+  #header h2 {
+    font-size: 20px;
+    line-height: 1.35;
+    max-width: 340px;
+    margin: 0 auto 28px auto;
+    color: rgba(255, 255, 255, 0.86);
+    text-align: center;
+    text-shadow: 0 0 8px rgba(226, 6, 32, 0.35);
+  }
+
+  #header h2 span {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  #header .social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    margin-top: 0;
+  }
+
+  #header .social-links a {
+    width: 43px;
+    height: 43px;
+    margin: 0;
+    font-size: 18px;
+    color: #e20620;
+    background: rgba(226, 6, 32, 0.13);
+  }
+
+  #header .social-links a:hover {
+    background: rgba(226, 6, 32, 0.85);
+    color: #fff;
+  }
+
+  .mobile-nav-toggle {
+    display: block;
+    top: 26px;
+    right: 24px;
+    font-size: 34px;
+    z-index: 1000;
+  }
+
+  /* Header cuando se entra a una sección */
+  #header.header-top {
+    height: 70px;
+    min-height: 70px;
+    overflow: visible;
+    padding: 0 18px;
+  }
+
+  #header.header-top .container {
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0;
+    text-align: left;
+  }
+
+  #header.header-top h1 {
+    font-size: 28px;
+    line-height: 1;
+  }
+
+  #header.header-top h1 a {
+    font-size: 28px;
+  }
+
+  #header.header-top h2,
+  #header.header-top .social-links {
+    display: none;
+  }
+
+  section {
+    top: 95px;
+    padding: 0 14px;
+  }
+
+  section.section-show {
+    top: 82px;
+    padding-bottom: 35px;
+  }
+
+  section .container {
+    padding: 24px 18px;
+    background: rgba(0, 0, 0, 0.86);
+  }
+
+  .section-title h2 {
+    font-size: 13px;
+    line-height: 1;
+    letter-spacing: 4px;
+    margin-bottom: 22px;
+  }
+
+  .section-title h2::after {
+    width: 90px;
+  }
+
+  .section-title p {
+    font-size: 34px;
+    line-height: 1.15;
+    margin-top: -10px;
+    margin-bottom: 22px;
+  }
+
+  .about-me .content h3 {
+    text-align: center;
+    font-size: 24px;
+    margin-top: 22px;
+  }
+
+  .about-me .content p {
+    font-size: 15px;
+    line-height: 1.7;
+    text-align: left;
+  }
+
+  .about-me .content ul li {
+    align-items: flex-start;
+    font-size: 14px;
+    margin-bottom: 14px;
+  }
+
+  .foto-cv {
+    max-width: 245px;
+    margin: 0 auto 18px auto;
+  }
+
+  .skills h3 {
+    font-size: 23px;
+    margin-top: 18px;
+  }
+
+  .skills .progress {
+    height: 56px;
+  }
+
+  .resume .resume-title {
+    font-size: 24px;
+  }
+
+  .resume .resume-item h4 {
+    line-height: 1.35;
+    font-size: 17px;
+  }
+
+  .portfolio .portfolio-wrap img {
+    height: 220px;
+  }
+}
+
+/* =========================================================
+   MOBILE CONTACTO
+   ========================================================= */
+@media (max-width: 768px) {
+
+  .contact .contact-icons,
+  .contact-icons {
+    height: auto;
+    margin-top: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact .icon-group,
+  .icon-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    max-width: 290px;
+    margin: 0 auto;
+  }
+
+  .contact .contact-icons a,
+  .contact-icons a,
+  .contact .icon-group a,
+  .icon-group a {
+    width: 82px;
+    height: 82px;
+    border-radius: 50%;
+    font-size: 40px;
+    color: rgba(255, 255, 255, 0.48);
+    background: rgba(255, 255, 255, 0.06);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+
+  .contact .contact-icons a:hover,
+  .contact-icons a:hover,
+  .contact .icon-group a:hover,
+  .icon-group a:hover {
+    color: #e20620;
+    background: rgba(226, 6, 32, 0.16);
+    transform: translateY(-4px);
+  }
+
+  .contact .section-title p {
+    font-size: 36px;
+    line-height: 1.18;
+  }
+}
+
+/* =========================================================
+   MOBILE PEQUEÑO
+   ========================================================= */
+@media (max-width: 480px) {
+
+  body::before {
+    background-position: center top;
+    background-size: auto 100vh;
+  }
+
+  #header h1,
+  #header h1 a,
+  #header h1 a:hover {
+    font-size: 35px;
+  }
+
+  #header h2 {
+    font-size: 19px;
+    max-width: 310px;
+    line-height: 1.38;
+    margin-bottom: 26px;
+  }
+
+  #header .social-links {
+    gap: 16px;
+  }
+
+  #header .social-links a {
+    width: 41px;
+    height: 41px;
+    font-size: 17px;
+  }
+
+  section {
+    padding: 0 10px;
+  }
+
+  section .container {
+    padding: 22px 16px;
+  }
+
+  .section-title p {
+    font-size: 30px;
+  }
+
+  .contact .section-title p {
+    font-size: 34px;
+  }
+
+  .contact .icon-group,
+  .icon-group {
+    max-width: 250px;
+    gap: 24px;
+  }
+
+  .contact .contact-icons a,
+  .contact-icons a,
+  .contact .icon-group a,
+  .icon-group a {
+    width: 76px;
+    height: 76px;
+    font-size: 36px;
+  }
+
+  .portfolio .portfolio-wrap img {
+    height: 190px;
+  }
+}
+
+/* =========================================================
+   MOBILE MUY ANGOSTO
+   ========================================================= */
+@media (max-width: 375px) {
+
+  #header h1,
+  #header h1 a,
+  #header h1 a:hover {
+    font-size: 31px;
+  }
+
+  #header h2 {
+    font-size: 17px;
+    max-width: 285px;
+  }
+
+  .contact .icon-group,
+  .icon-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 230px;
+    gap: 22px;
+  }
+
+  .contact .contact-icons a,
+  .contact-icons a,
+  .contact .icon-group a,
+  .icon-group a {
+    width: 72px;
+    height: 72px;
+    font-size: 34px;
+  }
+}
