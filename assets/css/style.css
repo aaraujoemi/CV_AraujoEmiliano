@@ -2230,3 +2230,45 @@ section .container {
     font-size: 34px !important;
   }
 }
+/* =========================================================
+   MOBILE - BLOQUE TRANSPARENTE PARA TEXTO DE INICIO
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  #header .container {
+    background: rgba(0, 0, 0, 0.48) !important;
+    backdrop-filter: blur(2px) !important;
+    -webkit-backdrop-filter: blur(2px) !important;
+    border-radius: 18px !important;
+    padding: 34px 22px !important;
+    max-width: 88% !important;
+    box-shadow: 0 0 22px rgba(0, 0, 0, 0.45) !important;
+  }
+
+  #header h1,
+  #header h1 a {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.95),
+                 0 0 12px rgba(226, 6, 32, 0.45) !important;
+  }
+
+  #header h2 {
+    color: rgba(255, 235, 235, 0.95) !important;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.95) !important;
+  }
+
+  #header .social-links {
+    margin-top: 28px !important;
+  }
+
+  #header .social-links a {
+    background: rgba(0, 0, 0, 0.45) !important;
+    color: #e20620 !important;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.45) !important;
+  }
+
+  #header .social-links a:hover {
+    background: rgba(226, 6, 32, 0.75) !important;
+    color: #fff !important;
+  }
+}
