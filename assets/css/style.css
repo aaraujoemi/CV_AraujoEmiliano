@@ -1913,3 +1913,320 @@ section .container {
     font-size: 34px;
   }
 }
+
+
+/* =========================================================
+   CORRECCIÓN FINAL - MOBILE BACKGROUND + CONTACTO EN COLUMNA
+   Archivo base: style.css
+   Imagen mobile requerida: assets/img/bg-mobilee.jpg
+   ========================================================= */
+
+/* Mantiene desktop como está: usa bg.jpg */
+@media (min-width: 992px) {
+  body::before {
+    background: #040404 url("../img/bg.jpg") top right no-repeat !important;
+    background-size: cover !important;
+    background-attachment: fixed !important;
+  }
+}
+
+/* Celular y tablet: usa fondo vertical mobile */
+@media (max-width: 991px) {
+
+  body::before {
+    background: #040404 url("../img/bg-mobilee.jpg") center center no-repeat !important;
+    background-size: cover !important;
+    background-attachment: scroll !important;
+    height: 100vh !important;
+    min-height: 100vh !important;
+  }
+
+  body {
+    background-color: #040404 !important;
+    overflow-x: hidden !important;
+  }
+
+  /* Inicio mobile */
+  #header {
+    min-height: 100vh !important;
+    height: 100vh !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+    padding: 0 20px !important;
+  }
+
+  #header .container {
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  #header h1 {
+    margin: 0 0 18px 0 !important;
+    padding: 0 !important;
+    text-align: center !important;
+    max-width: 100% !important;
+  }
+
+  #header h1 a,
+  #header h1 a:hover {
+    font-size: 38px !important;
+    line-height: 1.12 !important;
+    text-align: center !important;
+  }
+
+  #header h2 {
+    font-size: 21px !important;
+    line-height: 1.35 !important;
+    max-width: 340px !important;
+    margin: 0 auto 34px auto !important;
+    text-align: center !important;
+    color: rgba(255, 225, 225, 0.92) !important;
+    text-shadow: 0 0 8px rgba(226, 6, 32, 0.45) !important;
+  }
+
+  #header h2 span {
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+  }
+
+  #header .social-links {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 18px !important;
+    flex-wrap: nowrap !important;
+    margin: 0 !important;
+  }
+
+  #header .social-links a {
+    width: 44px !important;
+    height: 44px !important;
+    margin: 0 !important;
+    font-size: 19px !important;
+    color: #e20620 !important;
+    background: rgba(226, 6, 32, 0.18) !important;
+    border-radius: 50% !important;
+  }
+
+  #header .social-links a:hover {
+    background: rgba(226, 6, 32, 0.9) !important;
+    color: #fff !important;
+  }
+
+  /* Header superior cuando se entra a secciones */
+  #header.header-top {
+    height: 72px !important;
+    min-height: 72px !important;
+    overflow: visible !important;
+    padding: 0 18px !important;
+    background: rgba(0, 0, 0, 0.9) !important;
+  }
+
+  #header.header-top .container {
+    align-items: flex-start !important;
+    justify-content: center !important;
+    text-align: left !important;
+  }
+
+  #header.header-top h1,
+  #header.header-top h1 a,
+  #header.header-top h1 a:hover {
+    font-size: 28px !important;
+    line-height: 1 !important;
+    margin: 0 !important;
+  }
+
+  #header.header-top h2,
+  #header.header-top .social-links {
+    display: none !important;
+  }
+
+  .mobile-nav-toggle {
+    display: block !important;
+    top: 26px !important;
+    right: 24px !important;
+    font-size: 34px !important;
+    z-index: 10000 !important;
+  }
+
+  section {
+    top: 95px !important;
+    padding: 0 14px !important;
+  }
+
+  section.section-show {
+    top: 82px !important;
+    padding-bottom: 35px !important;
+  }
+
+  section .container {
+    padding: 24px 18px !important;
+    background: rgba(0, 0, 0, 0.86) !important;
+  }
+
+  .section-title h2 {
+    font-size: 13px !important;
+    line-height: 1 !important;
+    letter-spacing: 4px !important;
+    margin-bottom: 22px !important;
+  }
+
+  .section-title h2::after {
+    width: 90px !important;
+  }
+
+  .section-title p {
+    font-size: 34px !important;
+    line-height: 1.15 !important;
+    margin-top: -10px !important;
+    margin-bottom: 22px !important;
+  }
+}
+
+/* Contacto mobile: botones uno debajo del otro */
+@media (max-width: 768px) {
+
+  #contact .container {
+    min-height: 78vh !important;
+  }
+
+  .contact .contact-icons,
+  .contact-icons {
+    height: auto !important;
+    margin-top: 34px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+
+  .contact .icon-group,
+  .icon-group {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 24px !important;
+    width: 100% !important;
+    max-width: 180px !important;
+    margin: 0 auto !important;
+  }
+
+  .contact .contact-icons a,
+  .contact-icons a,
+  .contact .icon-group a,
+  .icon-group a {
+    width: 86px !important;
+    height: 86px !important;
+    min-width: 86px !important;
+    min-height: 86px !important;
+    border-radius: 50% !important;
+    font-size: 40px !important;
+    line-height: 1 !important;
+    color: rgba(255, 255, 255, 0.55) !important;
+    background: rgba(255, 255, 255, 0.07) !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 0 !important;
+    text-decoration: none !important;
+    transition: all 0.3s ease !important;
+  }
+
+  .contact .contact-icons a:hover,
+  .contact-icons a:hover,
+  .contact .icon-group a:hover,
+  .icon-group a:hover {
+    color: #e20620 !important;
+    background: rgba(226, 6, 32, 0.18) !important;
+    transform: scale(1.06) !important;
+    text-shadow: 0 0 14px rgba(226, 6, 32, 0.45) !important;
+  }
+
+  .contact .section-title p {
+    font-size: 36px !important;
+    line-height: 1.18 !important;
+  }
+}
+
+/* Celulares angostos */
+@media (max-width: 480px) {
+
+  body::before {
+    background-image: url("../img/bg-mobilee.jpg") !important;
+    background-size: cover !important;
+    background-position: center center !important;
+  }
+
+  #header h1 a,
+  #header h1 a:hover {
+    font-size: 35px !important;
+  }
+
+  #header h2 {
+    font-size: 19px !important;
+    max-width: 310px !important;
+    line-height: 1.38 !important;
+  }
+
+  .contact .section-title p {
+    font-size: 34px !important;
+  }
+
+  .contact .icon-group,
+  .icon-group {
+    gap: 22px !important;
+  }
+
+  .contact .contact-icons a,
+  .contact-icons a,
+  .contact .icon-group a,
+  .icon-group a {
+    width: 80px !important;
+    height: 80px !important;
+    min-width: 80px !important;
+    min-height: 80px !important;
+    font-size: 37px !important;
+  }
+}
+
+@media (max-width: 375px) {
+
+  #header h1 a,
+  #header h1 a:hover {
+    font-size: 32px !important;
+  }
+
+  #header h2 {
+    font-size: 17px !important;
+    max-width: 285px !important;
+  }
+
+  .contact .icon-group,
+  .icon-group {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    max-width: 170px !important;
+    gap: 20px !important;
+  }
+
+  .contact .contact-icons a,
+  .contact-icons a,
+  .contact .icon-group a,
+  .icon-group a {
+    width: 74px !important;
+    height: 74px !important;
+    min-width: 74px !important;
+    min-height: 74px !important;
+    font-size: 34px !important;
+  }
+}
