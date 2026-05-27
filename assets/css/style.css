@@ -20,7 +20,7 @@ body {
 body::before {
   content: "";
   position: fixed;
-  background: #040404 url("../img/gigifofi.png") top right no-repeat;
+  background: #040404 url("../img/fotofondocompu.png") top right no-repeat;
   background-size: cover;
   left: 0;
   right: 0;
@@ -1918,13 +1918,13 @@ section .container {
 /* =========================================================
    CORRECCIÓN FINAL - MOBILE BACKGROUND + CONTACTO EN COLUMNA
    Archivo base: style.css
-   Imagen mobile requerida: assets/img/gigifomovil.png
+   Imagen mobile requerida: assets/img/fotofondomovil.png
    ========================================================= */
 
-/* Desktop: usa gigifofi.png */
+/* Desktop: usa fotofondocompu.png */
 @media (min-width: 992px) {
   body::before {
-    background: #040404 url("../img/gigifofi.png") top right no-repeat !important;
+    background: #040404 url("../img/fotofondocompu.png") top right no-repeat !important;
     background-size: cover !important;
     background-attachment: fixed !important;
   }
@@ -1934,7 +1934,7 @@ section .container {
 @media (max-width: 991px) {
 
   body::before {
-    background: #040404 url("../img/gigifomovil.png") center center no-repeat !important;
+    background: #040404 url("../img/fotofondomovil.png") center center no-repeat !important;
     background-size: cover !important;
     background-attachment: scroll !important;
     height: 100vh !important;
@@ -2161,7 +2161,7 @@ section .container {
 @media (max-width: 480px) {
 
   body::before {
-    background-image: url("../img/gigifomovil.png") !important;
+    background-image: url("../img/fotofondomovil.png") !important;
     background-size: cover !important;
     background-position: center center !important;
   }
@@ -2234,8 +2234,8 @@ section .container {
 /* =========================================================
    CORRECCIÓN FINAL DE FONDOS - SIN CORTES Y MOBILE VISIBLE
    Imágenes reales en assets/img/:
-   - Desktop: gigifofi.png
-   - Mobile:  gigifomovil.png
+   - Desktop: fotofondocompu.png
+   - Mobile:  fotofondomovil.png
    ========================================================= */
 
 /* Base */
@@ -2256,7 +2256,7 @@ body::before {
   z-index: -1;
 
   background-color: #040404 !important;
-  background-image: url("../img/gigifofi.png") !important;
+  background-image: url("../img/fotofondocompu.png") !important;
   background-repeat: no-repeat !important;
   background-position: center center !important;
   background-size: contain !important;
@@ -2267,7 +2267,7 @@ body::before {
 @media (max-width: 991px) {
   body::before {
     background-color: #040404 !important;
-    background-image: url("../img/gigifomovil.png") !important;
+    background-image: url("../img/fotofondomovil.png") !important;
     background-repeat: no-repeat !important;
     background-position: center bottom !important;
     background-size: 112% auto !important;
@@ -2280,7 +2280,7 @@ body::before {
 /* Celulares chicos: baja un poco el tamaño para que no se vea negro ni gigante */
 @media (max-width: 480px) {
   body::before {
-    background-image: url("../img/gigifomovil.png") !important;
+    background-image: url("../img/fotofondomovil.png") !important;
     background-position: center bottom !important;
     background-size: 108% auto !important;
   }
@@ -2289,8 +2289,107 @@ body::before {
 /* Celulares muy angostos */
 @media (max-width: 375px) {
   body::before {
-    background-image: url("../img/gigifomovil.png") !important;
+    background-image: url("../img/fotofondomovil.png") !important;
     background-position: center bottom !important;
     background-size: 105% auto !important;
   }
 }
+
+/* =========================================================
+   AJUSTE FINAL DE FONDOS - SIN TOCAR EL ESTILO EXISTENTE
+   Imágenes nuevas:
+   - Desktop: assets/img/fotofondocompu.png
+   - Mobile:  assets/img/fotofondomovil.png
+
+   Este bloque pisa solamente el fondo y agrega una opacidad sutil.
+   No modifica menú, títulos, secciones, portafolio ni contacto.
+   ========================================================= */
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #040404 !important;
+  background: transparent !important;
+}
+
+/* Fondo desktop */
+body::before {
+  content: "" !important;
+  position: fixed !important;
+  inset: 0 !important;
+  background-color: #040404 !important;
+  background-image: url("../img/fotofondocompu.png") !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-size: contain !important;
+  background-attachment: fixed !important;
+  z-index: -2 !important;
+}
+
+/* Opacidad sutil por delante del fondo */
+body::after {
+  content: "" !important;
+  position: fixed !important;
+  inset: 0 !important;
+  background: rgba(0, 0, 0, 0.16) !important;
+  pointer-events: none !important;
+  z-index: -1 !important;
+}
+
+/* Desktop / notebook */
+@media (min-width: 992px) {
+  body::before {
+    background-image: url("../img/fotofondocompu.png") !important;
+    background-position: center center !important;
+    background-size: contain !important;
+    background-attachment: fixed !important;
+  }
+
+  body::after {
+    background: rgba(0, 0, 0, 0.16) !important;
+  }
+}
+
+/* Tablet y celular */
+@media (max-width: 991px) {
+  body::before {
+    background-image: url("../img/fotofondomovil.png") !important;
+    background-position: center center !important;
+    background-size: contain !important;
+    background-attachment: scroll !important;
+    height: 100svh !important;
+    min-height: 100vh !important;
+  }
+
+  body::after {
+    background: rgba(0, 0, 0, 0.18) !important;
+  }
+}
+
+/* Celulares chicos */
+@media (max-width: 480px) {
+  body::before {
+    background-image: url("../img/fotofondomovil.png") !important;
+    background-position: center center !important;
+    background-size: contain !important;
+  }
+
+  body::after {
+    background: rgba(0, 0, 0, 0.18) !important;
+  }
+}
+
+/* Celulares muy angostos */
+@media (max-width: 375px) {
+  body::before {
+    background-image: url("../img/fotofondomovil.png") !important;
+    background-position: center center !important;
+    background-size: contain !important;
+  }
+}
+
