@@ -2313,3 +2313,29 @@ Credits
     transform: translateY(-3px) !important;
   }
 }
+/* =========================================================
+   OCULTAR ICONOS SOCIALES CUANDO EL HEADER QUEDA ARRIBA
+   Los iconos solo se ven en la pantalla inicial
+   ========================================================= */
+
+#header.header-top .social-links {
+  display: none !important;
+}
+
+#header.header-top h2 {
+  display: none !important;
+}
+
+/* Mantiene el menú bien alineado cuando el header está arriba */
+#header.header-top .container {
+  display: flex !important;
+  align-items: center !important;
+}
+
+#header.header-top .navbar {
+  margin: 0 !important;
+}
+
+#header.header-top h1 {
+  margin-right: auto !important;
+}
