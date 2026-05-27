@@ -20,7 +20,7 @@ body {
 body::before {
   content: "";
   position: fixed;
-  background: #040404 url("../img/bg-mobile.png") top right no-repeat;
+  background: #040404 url("../img/gigifofi.png") top right no-repeat;
   background-size: cover;
   left: 0;
   right: 0;
@@ -1921,10 +1921,10 @@ section .container {
    Imagen mobile requerida: assets/img/gigifomovil.png
    ========================================================= */
 
-/* Mantiene desktop con la imagen nueva: usa bg-mobile.png */
+/* Desktop: usa gigifofi.png */
 @media (min-width: 992px) {
   body::before {
-    background: #040404 url("../img/bg-mobile.png") top right no-repeat !important;
+    background: #040404 url("../img/gigifofi.png") top right no-repeat !important;
     background-size: cover !important;
     background-attachment: fixed !important;
   }
@@ -2231,3 +2231,55 @@ section .container {
   }
 }
 
+/* =========================================================
+   CORRECCIÓN DEFINITIVA DE FONDOS - PORTAFOLIO EMILIANO
+   Imágenes reales en assets/img/:
+   - Desktop: gigifofi.png
+   - Mobile:  gigifomovil.png
+   ========================================================= */
+
+body::before {
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  min-height: 100vh;
+  z-index: -1;
+  background-color: #040404 !important;
+  background-image: url("../img/gigifofi.png") !important;
+  background-repeat: no-repeat !important;
+  background-position: top right !important;
+  background-size: cover !important;
+  background-attachment: fixed !important;
+}
+
+@media (max-width: 991px) {
+  body::before {
+    background-color: #040404 !important;
+    background-image: url("../img/gigifomovil.png") !important;
+    background-repeat: no-repeat !important;
+    background-position: right bottom !important;
+    background-size: auto 112vh !important;
+    background-attachment: scroll !important;
+  }
+}
+
+@media (max-width: 480px) {
+  body::before {
+    background-image: url("../img/gigifomovil.png") !important;
+    background-repeat: no-repeat !important;
+    background-position: right bottom !important;
+    background-size: auto 118vh !important;
+  }
+}
+
+@media (max-width: 375px) {
+  body::before {
+    background-image: url("../img/gigifomovil.png") !important;
+    background-position: right bottom !important;
+    background-size: auto 122vh !important;
+  }
+}
