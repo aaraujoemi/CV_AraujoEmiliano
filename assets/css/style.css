@@ -20,7 +20,7 @@ body {
 body::before {
   content: "";
   position: fixed;
-  background: #040404 url("../img/bg.jpg") top right no-repeat;
+  background: #040404 url("../img/bg-mobile.png") top right no-repeat;
   background-size: cover;
   left: 0;
   right: 0;
@@ -1918,13 +1918,13 @@ section .container {
 /* =========================================================
    CORRECCIÓN FINAL - MOBILE BACKGROUND + CONTACTO EN COLUMNA
    Archivo base: style.css
-   Imagen mobile requerida: assets/img/bg-mobilee.jpg
+   Imagen mobile requerida: assets/img/gigifomovil.png
    ========================================================= */
 
-/* Mantiene desktop como está: usa bg.jpg */
+/* Mantiene desktop con la imagen nueva: usa bg-mobile.png */
 @media (min-width: 992px) {
   body::before {
-    background: #040404 url("../img/bg.jpg") top right no-repeat !important;
+    background: #040404 url("../img/bg-mobile.png") top right no-repeat !important;
     background-size: cover !important;
     background-attachment: fixed !important;
   }
@@ -1934,7 +1934,7 @@ section .container {
 @media (max-width: 991px) {
 
   body::before {
-    background: #040404 url("../img/bg-mobilee.jpg") center center no-repeat !important;
+    background: #040404 url("../img/gigifomovil.png") center center no-repeat !important;
     background-size: cover !important;
     background-attachment: scroll !important;
     height: 100vh !important;
@@ -2161,7 +2161,7 @@ section .container {
 @media (max-width: 480px) {
 
   body::before {
-    background-image: url("../img/bg-mobilee.jpg") !important;
+    background-image: url("../img/gigifomovil.png") !important;
     background-size: cover !important;
     background-position: center center !important;
   }
