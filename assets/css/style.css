@@ -20,7 +20,7 @@ body {
 body::before {
   content: "";
   position: fixed;
-  background: #040404 url("../img/fotofondocompu.png") top right no-repeat;
+  background: #040404 url("assets/img/fotofondocompu.png") top right no-repeat;
   background-size: cover;
   left: 0;
   right: 0;
@@ -1934,7 +1934,7 @@ section .container {
 @media (max-width: 991px) {
 
   body::before {
-    background: #040404 url("../img/fotofondomovil.png") center center no-repeat !important;
+    background: #040404 url("assets/img/fotofondomovil.png") center center no-repeat !important;
     background-size: cover !important;
     background-attachment: scroll !important;
     height: 100vh !important;
