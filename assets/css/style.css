@@ -2157,3 +2157,159 @@ Credits
     font-size: 34px !important;
   }
 }
+
+/* =========================================================
+   CORRECCIÓN VISUAL HEADER / MENÚ / BOTONES SOCIALES
+   Pegar al FINAL de style.css
+   ========================================================= */
+
+/* Contenedor del inicio */
+#header .container {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+/* Menú desktop corregido */
+.navbar {
+  padding: 0 !important;
+  margin-top: 35px !important;
+}
+
+.navbar ul {
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex !important;
+  list-style: none !important;
+  align-items: center !important;
+  gap: 0 !important;
+}
+
+.navbar li {
+  position: relative !important;
+}
+
+.navbar li + li {
+  margin-left: 30px !important;
+}
+
+.navbar a,
+.navbar a:focus {
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: auto !important;
+  height: auto !important;
+  padding: 0 !important;
+  bottom: auto !important;
+  left: auto !important;
+  visibility: visible !important;
+  font-family: "Poppins", sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  color: rgba(255, 255, 255, 0.7) !important;
+  background: transparent !important;
+  white-space: nowrap !important;
+  text-decoration: none !important;
+  transition: 0.3s !important;
+}
+
+/* Línea inferior del menú */
+.navbar a::before {
+  content: "" !important;
+  position: absolute !important;
+  width: 0 !important;
+  height: 2px !important;
+  bottom: -4px !important;
+  left: 0 !important;
+  background-color: #e20620c0 !important;
+  visibility: hidden !important;
+  transition: all 0.3s ease-in-out 0s !important;
+}
+
+.navbar a:hover::before,
+.navbar li:hover > a::before,
+.navbar .active::before {
+  visibility: visible !important;
+  width: 25px !important;
+}
+
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover > a {
+  color: #fff !important;
+}
+
+/* Botones sociales del inicio: estado normal */
+#header .social-links {
+  margin-top: 40px !important;
+  display: flex !important;
+  justify-content: flex-start !important;
+  align-items: center !important;
+  gap: 8px !important;
+  flex-wrap: wrap !important;
+}
+
+#header .social-links a {
+  width: 40px !important;
+  height: 40px !important;
+  margin: 0 !important;
+  border-radius: 50% !important;
+  font-size: 16px !important;
+  line-height: 1 !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  color: #980b0b !important;
+  background: rgba(166, 42, 42, 0.3) !important;
+  text-decoration: none !important;
+  transform: none !important;
+  text-shadow: none !important;
+  transition: all 0.3s ease !important;
+}
+
+/* Botones sociales del inicio: al pasar el mouse */
+#header .social-links a:hover {
+  background: #e20620c0 !important;
+  color: #fff !important;
+  transform: translateY(-3px) !important;
+  text-shadow: none !important;
+}
+
+/* Mobile: evita que el menú quede apretado o superpuesto */
+@media (max-width: 991px) {
+  .navbar ul {
+    display: none !important;
+  }
+
+  #header .container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  #header .social-links {
+    justify-content: center !important;
+    gap: 16px !important;
+    margin-top: 0 !important;
+  }
+
+  #header .social-links a {
+    width: 42px !important;
+    height: 42px !important;
+    font-size: 18px !important;
+    color: #e20620 !important;
+    background: rgba(226, 6, 32, 0.14) !important;
+    transform: none !important;
+    text-shadow: none !important;
+  }
+
+  #header .social-links a:hover {
+    color: #fff !important;
+    background: rgba(226, 6, 32, 0.85) !important;
+    transform: translateY(-3px) !important;
+  }
+}
